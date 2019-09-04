@@ -6,6 +6,9 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var weathersRouter = require('./routes/weathers');
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/my-api', {useNewUrlParser: true});
 
 var app = express();
 
