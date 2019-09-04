@@ -2,13 +2,6 @@ var express = require('express');
 var router = express.Router();
 var weatherRepository = require('../repositories/weathers');
 
-let weathers = [
-  {id: 1, name: "Melbourne", description: "Hot", icon: "", temp: "23~24"},
-  {id: 2, name: "Sydney", description: "Clear", icon: "", temp: "13~24"},
-  {id: 3, name: "Brisbane", description: "Rain", icon: "", temp: "22~25"},
-  {id: 4, name: "Darwin", description: "Cloud", icon: "", temp: "16~20"}
-];
-
 /* GET users listing. */
 router.get('/', async function(req, res, next) {
   try{

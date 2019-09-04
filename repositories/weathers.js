@@ -1,4 +1,3 @@
-var MongoClient = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectID;
 
 const weatherSchema = require('../models/weathers');

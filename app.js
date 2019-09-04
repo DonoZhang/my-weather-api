@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var weathersRouter = require('./routes/weathers');
+var citiesRouter = require('./routes/cities');
 var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost:27017/my-api', {useNewUrlParser: true});
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/weathers', weathersRouter);
+app.use('/cities', citiesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

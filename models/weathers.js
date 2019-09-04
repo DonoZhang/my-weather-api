@@ -2,12 +2,6 @@ const mongoose = require('mongoose');
 
 const weatherSchema = new mongoose.Schema(
     {
-        cityName: {
-            type: String,
-            required: true,
-            trim: true,
-            minlength: 2
-        },
         description:{
             type: String,
             required: true,
@@ -22,6 +16,10 @@ const weatherSchema = new mongoose.Schema(
         },
         icon: {
             type: String
+        },
+        city: { 
+            type: String,
+            ref: 'City'
         }
     }
 );
